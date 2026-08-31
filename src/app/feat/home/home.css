@@ -1,0 +1,9 @@
+.hero-shift {
+    transform: translateY(-60px);
+}
+
+@media (max-height: 600px) {
+    .hero-shift {
+        transform: translateY(-20px);
+    }
+}
