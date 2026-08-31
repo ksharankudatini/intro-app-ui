@@ -1,1 +1,31 @@
-<p>create-account works!</p>
+<div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
+    <form [formGroup]="createAccountForm" (ngSubmit)="onSubmit()" class="w-100" style="max-width: 360px;">
+        <h2 class="mb-4 text-center">Create Account</h2>
+        <div class="mb-3">
+            <input id="name" type="text" formControlName="name" class="form-control" placeholder="Name">
+            @if (createAccountForm.get('name')?.invalid && createAccountForm.get('name')?.touched) {
+            <div class="text-danger small mt-1">Name is required</div>
+            }
+        </div>
+        <div class="mb-3">
+            <input id="contactNumber" type="text" formControlName="contactNumber" class="form-control"
+                placeholder="Contact Number">
+            @if (createAccountForm.get('contactNumber')?.invalid && createAccountForm.get('contactNumber')?.touched) {
+            <div class="text-danger small mt-1">Contact Number is required</div>
+            }
+        </div>
+        <div class="mb-3">
+            <input id="username" type="text" formControlName="username" class="form-control" placeholder="Username">
+            @if (createAccountForm.get('username')?.invalid && createAccountForm.get('username')?.touched) {
+            <div class="text-danger small mt-1">Username is required</div>
+            }
+        </div>
+        <div class="mb-3">
+            <input id="password" type="password" formControlName="password" class="form-control" placeholder="Password">
+            @if (createAccountForm.get('password')?.invalid && createAccountForm.get('password')?.touched) {
+            <div class="text-danger small mt-1">Password is required</div>
+            }
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Create Account</button>
+    </form>
+</div>
