@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
-import { Login } from './feat/login/login';
-import { Home } from './feat/home/home';
 import { CreateAccount } from './feat/create-account/create-account';
+import { Dashboard } from './feat/dashboard/dashboard';
+import { Home } from './feat/home/home';
+import { Login } from './feat/login/login';
 
 export const routes: Routes = [
     {
@@ -20,5 +21,9 @@ export const routes: Routes = [
     {
         path: 'create-account',
         component: CreateAccount
+    },
+    {
+        path: 'dashboard',
+        component: Dashboard
     }
 ];

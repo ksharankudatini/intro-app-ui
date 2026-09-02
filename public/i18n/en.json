@@ -1,0 +1,23 @@
+{
+    "home": {
+        "title": "Welcome to Appaji IntroApp Home"
+    },
+    "login": {
+        "title": "Login to your Account",
+        "login": "Login"
+    },
+    "createAccount": {
+        "title": "Create a new Account",
+        "createAccount": "Create Account"
+    },
+    "field": {
+        "name": "Name",
+        "username": "Username",
+        "password": "Password",
+        "contactNumber": "Contact Number",
+        "usernameIsRequired": "Username is required",
+        "passwordIsRequired": "Password is required",
+        "nameIsRequired": "Name is required",
+        "contactNumberIsRequired": "Contact Number is required"
+    }
+}
