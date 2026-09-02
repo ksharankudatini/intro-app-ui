@@ -10,6 +10,18 @@
         "title": "Create a new Account",
         "createAccount": "Create Account"
     },
+    "dashboard": {
+        "title": "Dashboard"
+    },
+    "about": {
+        "title": "About"
+    },
+    "experience": {
+        "title": "Experience"
+    },
+    "youtube": {
+        "title": "YouTube Videos"
+    },
     "field": {
         "name": "Name",
         "username": "Username",

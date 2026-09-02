@@ -1,13 +1,16 @@
 import { Routes } from '@angular/router';
+import { About } from './feat/about/about';
 import { CreateAccount } from './feat/create-account/create-account';
 import { Dashboard } from './feat/dashboard/dashboard';
+import { Experience } from './feat/experience/experience';
 import { Home } from './feat/home/home';
 import { Login } from './feat/login/login';
+import { Youtube } from './feat/youtube/youtube';
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: '/home',
+        redirectTo: 'home',
         pathMatch: 'full'
     },
     {
@@ -24,6 +27,25 @@ export const routes: Routes = [
     },
     {
         path: 'dashboard',
-        component: Dashboard
+        component: Dashboard,
+        children: [
+            {
+                path: '',
+                redirectTo: 'about',
+                pathMatch: 'full'
+            },
+            {
+                path: 'about',
+                component: About
+            },
+            {
+                path: 'experience',
+                component: Experience
+            },
+            {
+                path: 'youtube',
+                component: Youtube
+            }
+        ]
     }
 ];

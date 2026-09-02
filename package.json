@@ -1,6 +1,10 @@
 {
   "name": "intro-app-ui",
   "version": "0.0.0",
+  "author": {
+    "name": "Appaji",
+    "email": "ksharankudatini@gmail.com"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavLink } from '../../models/nav-link.model';
 
@@ -10,10 +10,10 @@ import { NavLink } from '../../models/nav-link.model';
   templateUrl: './navbar.html',
 })
 export class Navbar {
-  readonly brand = input('IntroApp');
-  readonly links = input<NavLink[]>([
+  readonly brand = 'IntroApp';
+  readonly links: NavLink[] = [
     { label: 'Home', path: '/home' },
     { label: 'Login', path: '/login' },
     { label: 'Create Account', path: '/create-account' }
-  ]);
+  ];
 }

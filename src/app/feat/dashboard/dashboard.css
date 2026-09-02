@@ -1,0 +1,26 @@
+.nav.flex-column {
+    min-width: 200px;
+    padding: 5rem;
+    border-right: 1px solid #bbab1f;
+}
+
+.nav.flex-column .nav-link {
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.8rem;
+    color: var(--bs-body-color);
+}
+
+.nav.flex-column .nav-link:hover {
+    background-color: #d3bc7d;
+}
+
+.nav.flex-column .nav-link.active {
+    background-color: var(--bs-primary);
+    color: #fff;
+    font-weight: 600;
+}
+
+li {
+    padding: 1rem;
+}
