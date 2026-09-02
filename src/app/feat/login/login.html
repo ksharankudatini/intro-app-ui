@@ -1,18 +1,20 @@
-<div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
+<app-header [title]="title()" />
+<div class="container d-flex flex-column align-items-center justify-content-center min-vh-50">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="w-100" style="max-width: 360px;">
-        <h2 class="mb-4 text-center">Login</h2>
         <div class="mb-3">
-            <input id="username" type="text" formControlName="username" class="form-control" placeholder="Username">
+            <input id="username" type="text" formControlName="username" class="form-control"
+                placeholder="{{'field.username' | translate}}">
             @if (loginForm.get('username')?.invalid && loginForm.get('username')?.touched) {
-            <div class="text-danger small mt-1">Username is required</div>
+            <div class="text-danger small mt-1">{{'field.usernameIsRequired' | translate}}</div>
             }
         </div>
         <div class="mb-3">
-            <input id="password" type="password" formControlName="password" class="form-control" placeholder="Password">
+            <input id="password" type="password" formControlName="password" class="form-control"
+                placeholder="{{'field.password' | translate}}">
             @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
-            <div class="text-danger small mt-1">Password is required</div>
+            <div class="text-danger small mt-1">{{'field.passwordIsRequired' | translate}}</div>
             }
         </div>
-        <button type="submit" class="btn btn-primary w-100">Login</button>
+        <button type="submit" class="btn btn-primary w-100">{{'login.login' | translate}}</button>
     </form>
 </div>

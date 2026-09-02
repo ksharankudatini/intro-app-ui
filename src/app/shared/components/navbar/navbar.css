@@ -1,0 +1,8 @@
+.navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+    font-weight: 600;
+}
+
+.brand {
+    color: rgba(97, 68, 0, 0.5);
+}
