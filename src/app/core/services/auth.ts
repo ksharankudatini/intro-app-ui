@@ -21,7 +21,7 @@ export class AuthService {
     }
 
     private set token(token: string) {
-        localStorage.setItem(this.tokenKey, "tokenddsaffaafafafdsfdsa");
+        localStorage.setItem(this.tokenKey, token);
     }
 
     get token(): string | null {
