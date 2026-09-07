@@ -1,11 +1,20 @@
 {
   "name": "intro-app-ui",
   "version": "0.0.0",
+  "author": {
+    "name": "Appaji",
+    "email": "ksharankudatini@gmail.com"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:dev": "ng serve --configuration dev",
+    "start:qa": "ng serve --configuration qa",
+    "start:prod": "ng serve --configuration prod",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --configuration dev",
+    "build:qa": "ng build --configuration qa",
+    "build:prod": "ng build --configuration prod",
     "test": "ng test"
   },
   "private": true,
@@ -17,6 +26,10 @@
     "@angular/forms": "^22.1.0",
     "@angular/platform-browser": "^22.1.0",
     "@angular/router": "^22.1.0",
+    "@ngx-translate/core": "^18.0.0",
+    "@ngx-translate/http-loader": "^18.0.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

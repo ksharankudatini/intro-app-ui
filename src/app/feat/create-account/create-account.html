@@ -1,0 +1,31 @@
+<app-header [title]="title()" />
+<div class="container d-flex flex-column align-items-center justify-content-center min-vh-50">
+    <form [formGroup]="createAccountForm" (ngSubmit)="onSubmit()" class="w-100" style="max-width: 360px;">
+        <div class="mb-3">
+            <input id="name" type="text" formControlName="name" class="form-control" placeholder="{{'field.name' | translate}}">
+            @if (createAccountForm.get('name')?.invalid && createAccountForm.get('name')?.touched) {
+            <div class="text-danger small mt-1">{{'field.nameIsRequired' | translate}}</div>
+            }
+        </div>
+        <div class="mb-3">
+            <input id="contactNumber" type="text" formControlName="contactNumber" class="form-control"
+                placeholder="{{'field.contactNumber' | translate}}">
+            @if (createAccountForm.get('contactNumber')?.invalid && createAccountForm.get('contactNumber')?.touched) {
+            <div class="text-danger small mt-1">{{'field.contactNumberIsRequired' | translate}}</div>
+            }
+        </div>
+        <div class="mb-3">
+            <input id="username" type="text" formControlName="username" class="form-control" placeholder="{{'field.username' | translate}}">
+            @if (createAccountForm.get('username')?.invalid && createAccountForm.get('username')?.touched) {
+            <div class="text-danger small mt-1">{{'field.usernameIsRequired' | translate}}</div>
+            }
+        </div>
+        <div class="mb-3">
+            <input id="password" type="password" formControlName="password" class="form-control" placeholder="{{'field.password' | translate}}">
+            @if (createAccountForm.get('password')?.invalid && createAccountForm.get('password')?.touched) {
+            <div class="text-danger small mt-1">{{'field.passwordIsRequired' | translate}}</div>
+            }
+        </div>
+        <button type="submit" class="btn btn-primary w-100">{{'createAccount.createAccount' | translate}}</button>
+    </form>
+</div>
