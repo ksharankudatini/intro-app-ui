@@ -2,12 +2,19 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-  --bs-primary: #d4b106;        /* mustard-ish accent for buttons/links */
-  --bs-secondary: #e6c84d;  
+  --bs-primary: #d4b106;
+  /* mustard-ish accent for buttons/links */
+  --bs-secondary: #e6c84d;
   --bs-primary-rgb: 212, 177, 6;
-  --bs-body-bg: #fdf6e3;        /* pale yellow page background */
-  --bs-body-color: #4a4520;     /* readable dark-yellow/brown text */
+  --bs-body-bg: #fdf6e3;
+  /* pale yellow page background */
+  --bs-body-color: #4a4520;
+  /* readable dark-yellow/brown text */
   --bs-border-color: #f0e6b8;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
 }
 
 body {

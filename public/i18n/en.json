@@ -1,0 +1,35 @@
+{
+    "home": {
+        "title": "Welcome to Appaji IntroApp Home"
+    },
+    "login": {
+        "title": "Login to your Account",
+        "login": "Login"
+    },
+    "createAccount": {
+        "title": "Create a new Account",
+        "createAccount": "Create Account"
+    },
+    "dashboard": {
+        "title": "Dashboard"
+    },
+    "about": {
+        "title": "About"
+    },
+    "experience": {
+        "title": "Experience"
+    },
+    "youtube": {
+        "title": "YouTube Videos"
+    },
+    "field": {
+        "name": "Name",
+        "username": "Username",
+        "password": "Password",
+        "contactNumber": "Contact Number",
+        "usernameIsRequired": "Username is required",
+        "passwordIsRequired": "Password is required",
+        "nameIsRequired": "Name is required",
+        "contactNumberIsRequired": "Contact Number is required"
+    }
+}
