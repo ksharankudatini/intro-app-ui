@@ -8,6 +8,7 @@ import { Home } from './feat/home/home';
 import { Login } from './feat/login/login';
 import { Youtube } from './feat/youtube/youtube';
 // imports
+// all
 
 export const routes: Routes = [
     {
