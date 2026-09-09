@@ -34,6 +34,10 @@
           },
           "configurations": {
             "prod": {
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": true,
+              "outputHashing": "all",
               "budgets": [
                 {
                   "type": "initial",
@@ -46,7 +50,6 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -55,6 +58,9 @@
               ]
             },
             "qa": {
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": true,
               "outputHashing": "all",
               "fileReplacements": [
                 {
@@ -73,9 +79,14 @@
                   "with": "src/environments/environment.dev.ts"
                 }
               ]
+            },
+            "local": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
             }
           },
-          "defaultConfiguration": "prod"
+          "defaultConfiguration": "local"
         },
         "serve": {
           "builder": "@angular/build:dev-server",
@@ -88,9 +99,12 @@
             },
             "dev": {
               "buildTarget": "intro-app-ui:build:dev"
+            },
+            "local": {
+              "buildTarget": "intro-app-ui:build:local"
             }
           },
-          "defaultConfiguration": "dev"
+          "defaultConfiguration": "local"
         },
         "test": {
           "builder": "@angular/build:unit-test"
