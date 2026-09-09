@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './about.html',
 })
 export class About {
-  // commit
+  // commit1
+  // commit2
 }
