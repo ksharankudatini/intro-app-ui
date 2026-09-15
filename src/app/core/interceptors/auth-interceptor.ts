@@ -8,7 +8,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
     const authService = inject(AuthService);
     const router = inject(Router);
     const token = authService.token;
-    const isAuthUrl = req.url.includes('/login') || req.url.includes('/create-account');
+    const isAuthUrl = req.url.includes('/login') || req.url.includes('/create-account') || req.url.includes('/home');
     if (token && !isAuthUrl) {
         req = req.clone({
             setHeaders: {

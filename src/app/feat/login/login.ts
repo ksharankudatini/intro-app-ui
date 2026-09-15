@@ -17,7 +17,6 @@ export class Login {
   readonly title = translate('login.title');
   private readonly router = inject(Router);
   private readonly authService = inject(AuthService);
-  errorMessage = '';
 
   loginForm = this.fb.nonNullable.group({
     username: ['', Validators.required],
@@ -35,13 +34,12 @@ export class Login {
     const credentials = this.loginForm.getRawValue();
 
     this.authService.login(credentials).subscribe({
-      next: (res) => {
-        console.log('Login successful:', res);
+      next: res => {
+        console.log('Login successful : ', res);
         this.router.navigate(['/dashboard']); // Navigate to the dashboard or desired route
       },
-      error: (err) => {
-        console.error('Login failed:', err);
-        this.errorMessage = 'Login failed. Please check your credentials and try again.';
+      error: err => {
+        console.error('Login failed : ', err);
       }
     });
   }
